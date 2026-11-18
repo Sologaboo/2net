@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Panel de trabajo SwiftDesk para organizar clientes, operaciones, prorrateos y reportes.">
+	<meta name="application-name" content="SwiftDesk">
+	<meta name="author" content="SwiftDesk">
+	<meta name="theme-color" content="#f5f7fb">
+	<meta name="robots" content="noindex, nofollow">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="es_MX">
+	<meta property="og:site_name" content="SwiftDesk">
+	<meta property="og:title" content="SwiftDesk | Panel principal">
+	<meta property="og:description" content="Panel de trabajo SwiftDesk para organizar clientes, operaciones, prorrateos y reportes.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="SwiftDesk | Panel principal">
+	<meta name="twitter:description" content="Panel de trabajo SwiftDesk para organizar clientes, operaciones, prorrateos y reportes.">
+	<title>SwiftDesk | Panel principal</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="config.js" defer></script>
+	<script src="script.js" defer></script>
+</head>
+<body class="auth-pending">
+	<div class="app" id="app">
+		<aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+			<a class="brand" href="#" aria-label="SwiftDesk, inicio">
+				<span class="brand-mark" aria-hidden="true">S</span>
+				<span class="brand-name">SwiftDesk</span>
+			</a>
+			<div class="profile">
+				<div class="profile-top">
+					<div class="avatar" id="avatar" aria-hidden="true">MG</div>
+					<div class="profile-copy">
+						<div class="profile-name" id="profileName">María González</div>
+						<div class="profile-role">Asesora</div>
+					</div>
+				</div>
+				<div class="status"><span class="status-dot" aria-hidden="true"></span><span class="profile-copy">Sesión activa · Activo</span></div>
+			</div>
+			<p class="nav-label">Menú principal</p>
+			<nav class="nav-list" aria-label="Secciones">
+				<button class="nav-item active" type="button" data-section="Inicio"><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-text">Inicio</span></button>
+				<button class="nav-item" type="button" data-section="Clientes"><span class="nav-icon" aria-hidden="true">♙</span><span class="nav-text">Clientes</span></button>
+				<button class="nav-item" type="button" data-section="Gestión operativa"><span class="nav-icon" aria-hidden="true">▦</span><span class="nav-text">Gestión operativa</span></button>
+				<button class="nav-item" type="button" data-section="Prorrateos"><span class="nav-icon" aria-hidden="true">％</span><span class="nav-text">Prorrateos</span></button>
+				<button class="nav-item" type="button" data-section="Reportes"><span class="nav-icon" aria-hidden="true">▤</span><span class="nav-text">Reportes</span></button>
+			</nav>
+			<div class="sidebar-bottom">
+				<button class="logout" id="logout" type="button"><span class="nav-icon" aria-hidden="true">⇥</span><span class="logout-text">Cerrar sesión</span></button>
+			</div>
+			<button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Contraer menú" aria-expanded="true">‹</button>
+		</aside>
+
+		<main class="main">
+			<header class="main-header">
+				<div class="welcome">
+					<button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+					<span class="welcome-icon" aria-hidden="true">☀</span>
+					<span id="greeting">Buenos días</span><strong id="greetingName">María</strong>
+				</div>
+				<div class="search-wrap">
+					<span class="search-icon" aria-hidden="true">⌕</span>
+					<input class="search" id="search" type="search" placeholder="Buscar en tu espacio de trabajo..." aria-label="Buscar información en el panel">
+				</div>
+			</header>
+
+			<section aria-labelledby="pageTitle">
+				<div class="section-heading">
+					<div><p class="eyebrow">Tu espacio de trabajo</p><h1 id="pageTitle">Panel principal</h1></div>
+					<time class="date" id="todayDate"></time>
+				</div>
+				<div class="content-grid" id="contentGrid">
+					<article class="card" data-search="clientes seguimiento contacto nuevos clientes">
+						<div class="card-top"><span class="card-icon" aria-hidden="true">♙</span><span class="card-tag">En seguimiento</span></div>
+						<h2>Clientes</h2><p>Consulta y da seguimiento a la información de tus clientes.</p>
+					</article>
+					<article class="card" data-search="gestión operativa tareas agenda pendientes calendario">
+						<div class="card-top"><span class="card-icon" aria-hidden="true">▦</span><span class="card-tag">Hoy</span></div>
+						<h2>Gestión operativa</h2><p>Organiza tus actividades y revisa las tareas pendientes.</p>
+					</article>
+					<article class="card" data-search="prorrateo cálculos servicios calculadora">
+						<div class="card-top"><span class="card-icon" aria-hidden="true">％</span><span class="card-tag">Herramienta</span></div>
+						<h2>Prorrateos</h2><p>Accede a tus cálculos y herramientas de prorrateo.</p>
+					</article>
+					<article class="card" data-search="reportes indicadores resultados información">
+						<div class="card-top"><span class="card-icon" aria-hidden="true">▤</span><span class="card-tag">Resumen</span></div>
+						<h2>Reportes</h2><p>Encuentra resúmenes e indicadores de tu operación.</p>
+					</article>
+					<article class="card" data-search="guardia equipo información administrador aviso">
+						<div class="card-top"><span class="card-icon" aria-hidden="true">◷</span><span class="card-tag">Equipo</span></div>
+						<h2>Información de guardia</h2><p>Revisa los avisos y la información compartida por el equipo.</p>
+					</article>
+					<div class="empty-state" id="emptyState">No encontramos información que coincida con tu búsqueda.</div>
+				</div>
+			</section>
+
+			<aside class="info-banner" id="infoBanner" aria-label="Aviso informativo">
+				<div class="info-icon" aria-hidden="true">ℹ</div>
+				<div class="info-copy"><h2>Información de guardia</h2><p><strong>De guardia:</strong> Equipo de operaciones · <span id="adminMessage">Consulta aquí los avisos importantes compartidos por el administrador.</span></p></div>
+				<button class="dismiss-banner" id="dismissBanner" type="button" aria-label="Ocultar aviso">×</button>
+			</aside>
+			<button class="banner-show" id="showBanner" type="button">Mostrar aviso de guardia</button>
+		</main>
+
+		<div class="quick-tools" id="quickTools">
+			<div class="tool-list" id="toolList" aria-label="Herramientas rápidas" hidden>
+				<button class="tool-button" type="button" aria-label="Calculadora de prorrateo" data-tool="calculator">％</button>
+				<button class="tool-button" type="button" aria-label="Bloc de notas rápidas" data-tool="notes">▤</button>
+				<button class="tool-button" type="button" aria-label="Calendario de gestión operativa" data-tool="calendar">▦</button>
+				<button class="tool-button" type="button" aria-label="Preguntas frecuentes" data-tool="help">?</button>
+			</div>
+			<button class="tool-toggle" id="toolsToggle" type="button" aria-label="Mostrar herramientas rápidas" aria-expanded="false">+</button>
+		</div>
+
+		<section class="floating-panel" id="calculatorPanel" aria-labelledby="calculatorTitle" aria-hidden="true" hidden>
+			<header class="panel-header">
+				<div><p class="panel-kicker">Herramienta</p><h2 id="calculatorTitle">Calculadora de prorrateo</h2></div>
+				<div class="panel-controls">
+					<button class="panel-control" type="button" data-minimize="calculatorPanel" aria-label="Plegar calculadora" title="Plegar">−</button>
+					<button class="panel-control" type="button" data-close="calculatorPanel" aria-label="Cerrar calculadora" title="Cerrar">×</button>
+				</div>
+			</header>
+			<div class="panel-body">
+				<p class="panel-hint">Calcula el costo proporcional usando un mes de 30 días.</p>
+				<label class="field-label" for="prorrateo-dias">Días a calcular</label>
+				<input class="field-input" id="prorrateo-dias" type="number" min="1" max="31" step="1" inputmode="numeric" placeholder="Ej. 15">
+				<label class="field-label" for="prorrateo-monto">Monto mensual del plan</label>
+				<input class="field-input" id="prorrateo-monto" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ej. 25.00">
+				<p class="field-error" id="calculatorError" role="status" aria-live="polite"></p>
+				<div class="calculator-result"><span>Total a pagar</span><output id="prorrateo-output" for="prorrateo-dias prorrateo-monto">$0.00</output></div>
+			</div>
+		</section>
+
+		<section class="floating-panel notes-panel" id="notesPanel" aria-labelledby="notesTitle" aria-hidden="true" hidden>
+			<header class="panel-header">
+				<div><p class="panel-kicker">Personal</p><h2 id="notesTitle">Bloc de notas</h2></div>
+				<div class="panel-controls">
+					<button class="panel-control" type="button" data-minimize="notesPanel" aria-label="Plegar bloc de notas" title="Plegar">−</button>
+					<button class="panel-control" type="button" data-close="notesPanel" aria-label="Cerrar bloc de notas" title="Cerrar">×</button>
+				</div>
+			</header>
+			<div class="panel-body notes-body">
+				<label class="visually-hidden" for="notesInput">Escribe una nota</label>
+				<textarea id="notesInput" placeholder="Escribe una nota; se guardará automáticamente..."></textarea>
+				<p class="notes-status" id="notesStatus" role="status" aria-live="polite">Las notas se guardan en este dispositivo.</p>
+			</div>
+		</section>
+
+		<div class="notice" id="notice" role="status" aria-live="polite"></div>
+	</div>
+</body>
+</html>

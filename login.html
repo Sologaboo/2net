@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Inicia sesión en SwiftDesk para acceder a tu espacio de trabajo.">
+	<meta name="application-name" content="SwiftDesk">
+	<meta name="theme-color" content="#f5f7fb">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="referrer" content="no-referrer">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="es_MX">
+	<meta property="og:site_name" content="SwiftDesk">
+	<meta property="og:title" content="Iniciar sesión | SwiftDesk">
+	<meta property="og:description" content="Accede de forma segura a tu espacio de trabajo SwiftDesk.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Iniciar sesión | SwiftDesk">
+	<meta name="twitter:description" content="Accede de forma segura a tu espacio de trabajo SwiftDesk.">
+	<title>Iniciar sesión | SwiftDesk</title>
+	<link rel="stylesheet" href="login.css">
+	<script src="config.js" defer></script>
+	<script src="login.js" defer></script>
+</head>
+<body>
+	<main class="login-layout">
+		<section class="login-card" aria-labelledby="loginTitle">
+			<a class="brand" href="login.html" aria-label="SwiftDesk">
+				<span class="brand-mark" aria-hidden="true">S</span>
+				<span>SwiftDesk</span>
+			</a>
+			<div class="login-heading">
+				<p class="eyebrow">Espacio de trabajo</p>
+				<h1 id="loginTitle">Bienvenido de nuevo</h1>
+				<p>Ingresa con las credenciales asignadas por tu administrador.</p>
+			</div>
+			<form id="loginForm" novalidate>
+				<div class="form-field">
+					<label for="email">Correo electrónico</label>
+					<input id="email" name="email" type="email" maxlength="254" autocomplete="username" placeholder="nombre@empresa.com" required>
+				</div>
+				<div class="form-field">
+					<label for="password">Contraseña</label>
+					<input id="password" name="password" type="password" maxlength="128" autocomplete="current-password" placeholder="Ingresa tu contraseña" required>
+				</div>
+				<button class="submit-button" id="loginButton" type="submit">Iniciar sesión</button>
+				<p class="login-message" id="loginMessage" role="status" aria-live="polite"></p>
+			</form>
+			<button class="recovery-button" id="recoveryButton" type="button">¿Olvidaste tu contraseña?</button>
+			<p class="login-footnote">¿Necesitas acceso? Solicita una cuenta al administrador de tu organización.</p>
+		</section>
+		<aside class="login-aside" aria-label="SwiftDesk para tu equipo">
+			<div class="aside-mark" aria-hidden="true">S</div>
+			<p class="aside-eyebrow">Claridad en cada jornada</p>
+			<h2>Tu trabajo,<br>en un solo lugar.</h2>
+			<p>Accede a tus herramientas y organiza tu día con SwiftDesk.</p>
+			<div class="aside-line" aria-hidden="true"></div>
+			<span class="aside-caption">SwiftDesk · Espacio de trabajo</span>
+		</aside>
+	</main>
+</body>
+</html>
